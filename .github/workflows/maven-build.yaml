@@ -35,7 +35,3 @@ jobs:
 
       - name: Run Tests with Maven
         run: mvn test --file pom.xml
-
-      - name: Run JavaFX in Headless Mode (Optional)
-        if: always()
-        run: xvfb-run mvn javafx:run --file pom.xml
