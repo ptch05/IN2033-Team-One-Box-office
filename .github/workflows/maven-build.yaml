@@ -21,7 +21,7 @@ jobs:
           java-version: '21'
 
       - name: Install JavaFX Dependencies for Ubuntu
-        run: sudo apt-get update && sudo apt-get install -y libgl1-mesa-glx libxi6 libxrender1
+        run: sudo apt-get update && sudo apt-get install -y libgl1-mesa-glx libxi6 libxrender1 || sudo apt-get install -y libgl1 libxi6 libxrender1
 
       - name: Cache Maven packages
         uses: actions/cache@v3
