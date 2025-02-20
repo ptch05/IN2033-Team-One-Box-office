@@ -36,3 +36,5 @@ target/
 
 ### macOS ###
 .DS_Store
+
+config.properties
