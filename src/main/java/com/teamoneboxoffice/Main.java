@@ -8,6 +8,8 @@ import javafx.scene.Parent;
 
 import java.io.IOException;
 
+// Main class to start the application
+// This class loads the login form and displays it to the user
 public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
