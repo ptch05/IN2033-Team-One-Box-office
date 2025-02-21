@@ -21,6 +21,8 @@ public class MarketingInterface
         * This should return a boolean statement based on if there was a loss or gain.
 
          */
+
+        //String
         boolean compareCosts(String filmID);
     }
 

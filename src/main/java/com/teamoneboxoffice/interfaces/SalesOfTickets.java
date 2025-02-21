@@ -1,5 +1,8 @@
 package com.teamoneboxoffice.interfaces;
 
+import java.util.List;
+import java.util.Map;
+
 public interface SalesOfTickets {
     /**
      * Records the sale of tickets for a film event
@@ -11,4 +14,6 @@ public interface SalesOfTickets {
      */
     String recordTicketSale(int ticketsSoldNumber, double ticketRevenue,
                             double filmRentalCost, String filmId);
+
+    Map<String, Double> compareCosts();
 }
