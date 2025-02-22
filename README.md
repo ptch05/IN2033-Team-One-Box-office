@@ -1,7 +1,7 @@
 # IN2033-Team-One-Box-Office
 
 ## Project Overview
-This is our Team1 Box Office code. It's JavaFX-based application developed using Java 21 and Apache Maven, using Scene Builder to help create the UI.
+This is our Team1 Box Office code. It's a JavaFX-based application developed using Java 21 and Apache Maven, using Scene Builder to help create the UI.
 
 ## Project Structure
 ```
@@ -60,10 +60,11 @@ To run the application using Maven, execute the following command:
 mvn clean javafx:run
 ```
 
-### Using IntelliJ IDEA
+<!-- ### Using IntelliJ IDEA
 1. Open the project in **IntelliJ IDEA**.
 2. Navigate to `src/main/java/com.teamoneboxoffice/Main.java`.
-3. Right-click on `Main.java` and select **Run 'Main.main()'**.
+3. Right-click on `Main.java` and select **Run 'Main.main()'**. -->
+
 
 ## CI/CD Pipeline
 This project includes a **GitHub Actions** workflow (`.github/workflows/maven-build.yaml`) for Continuous Integration.
