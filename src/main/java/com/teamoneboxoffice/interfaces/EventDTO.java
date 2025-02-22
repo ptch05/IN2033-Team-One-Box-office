@@ -2,28 +2,25 @@ package com.teamoneboxoffice.interfaces;
 
 import java.util.Date;
 
-public class Event
+public class EventDTO
 {
     private String eventID;
     private String eventType;
     private String eventName;
-    private double eventPrice;
+    //private double eventPrice;
     private double ticketRevenue;
-    private String hallType;
-    private Date eventDate;
-    private String eventTime; //--Format: HH:MM:SS
     private double rentalCost;
     private int ticketNumbers;
 
-    Event(String eventID, String eventName, String eventType, double eventPrice, String hallType, Date eventDate, String eventTime)
+    EventDTO(String eventID, String eventName, String eventType, double rentalCost, double ticketRevenue, int ticketNumbers)
     {
         this.eventID = eventID;
         this.eventType = eventType;
-        this.eventPrice = eventPrice;
-        this.hallType = hallType;
-        this.eventDate = eventDate;
-        this.eventTime = eventTime;
+        //this.eventPrice = eventPrice;
         this.eventName = eventName;
+        this.rentalCost = rentalCost;
+        this.ticketRevenue = ticketRevenue; //--initially set to null
+        this.ticketNumbers = ticketNumbers;
     }
 
     public String getEventID() {
@@ -48,15 +45,5 @@ public class Event
 
     public String getEventName() {
         return eventName;
-    }
-
-    //--Will be set later on:
-
-    public void setTicketRevenue(double ticketRevenue) {
-        this.ticketRevenue = ticketRevenue;
-    }
-
-    public void setTicketNumbers(int ticketNumbers) {
-        this.ticketNumbers = ticketNumbers;
     }
 }

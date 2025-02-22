@@ -1,6 +1,8 @@
 package com.teamoneboxoffice.services.implementations;
 
 import com.teamoneboxoffice.interfaces.Event;
+import com.teamoneboxoffice.interfaces.EventDTO;
+import com.teamoneboxoffice.interfaces.EventMapper;
 import com.teamoneboxoffice.interfaces.SalesOfTickets;
 
 import java.util.HashMap;
@@ -25,7 +27,7 @@ public class SalesOfTicketsImpl implements SalesOfTickets {
     private Map<String, Integer> ticketNumbers = new HashMap<>();
     private Map<String, String> filmIds = new HashMap<>();
 
-    private List<Event> events;
+    //private List<Event> events;
 
     private Map<String, Double> idToCosts;
 
@@ -72,23 +74,28 @@ public class SalesOfTicketsImpl implements SalesOfTickets {
 
      */
 
+
     @Override
-    public Map<String, Double> compareCosts()
+    public Map<String, Double> compareCosts(List<EventDTO> movieEvents)
     {
+        //for(Event e : events)
+        //{
+            EventMapper eventDTO = new EventMapper();
+            List<EventDTO> events = eventDTO.mapAllEventObjects();
 
-        for(Event e : events)
-        {
-            double rentalCost = e.getRentalCost();
-            double revenue = e.getTicketRevenue();
+            for(EventDTO e : events) {
+                if (eventDTO != null) //--data transfer objects
+                {
+                    double rentalCost = e.getRentalCost();
+                    double revenue = e.getTicketRevenue();
 
-            double costs = 0;
+                    double costs = 0;
 
-            costs = rentalCost - revenue;
+                    costs = rentalCost - revenue;
 
-            idToCosts.put(e.getEventID(), costs);
-
-        }
-
+                    idToCosts.put(e.getEventID(), costs);
+                }
+            }
 
         return idToCosts;
 

@@ -15,5 +15,5 @@ public interface SalesOfTickets {
     String recordTicketSale(int ticketsSoldNumber, double ticketRevenue,
                             double filmRentalCost, String filmId);
 
-    Map<String, Double> compareCosts();
+    Map<String, Double> compareCosts(List<EventDTO> movieEvents);
 }
